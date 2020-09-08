@@ -1,0 +1,483 @@
+Release 9.2i - xst J.36
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.48 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.48 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Reading design: gcd.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "gcd.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "gcd"
+Output Format                      : NGC
+Target Device                      : xc3s400-4-pq208
+
+---- Source Options
+Top Module Name                    : gcd
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : gcd.lso
+Keep Hierarchy                     : NO
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Xilinx92i/CGD_CALCULATOR/gcd_dataModeling.vhd" in Library work.
+Architecture mux_arc of Entity mux is up to date.
+Architecture comparator_arc of Entity comparator is up to date.
+Architecture subtractor_arc of Entity subtractor is up to date.
+Architecture regis_arc of Entity regis is up to date.
+Architecture fsm_arc of Entity fsm is up to date.
+Architecture gcd_arc of Entity gcd is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <gcd> in library <work> (architecture <gcd_arc>).
+
+Analyzing hierarchy for entity <fsm> in library <work> (architecture <fsm_arc>).
+
+Analyzing hierarchy for entity <mux> in library <work> (architecture <mux_arc>).
+
+Analyzing hierarchy for entity <regis> in library <work> (architecture <regis_arc>).
+
+Analyzing hierarchy for entity <comparator> in library <work> (architecture <comparator_arc>).
+
+Analyzing hierarchy for entity <subtractor> in library <work> (architecture <subtractor_arc>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <gcd> in library <work> (Architecture <gcd_arc>).
+Entity <gcd> analyzed. Unit <gcd> generated.
+
+Analyzing Entity <fsm> in library <work> (Architecture <fsm_arc>).
+Entity <fsm> analyzed. Unit <fsm> generated.
+
+Analyzing Entity <mux> in library <work> (Architecture <mux_arc>).
+Entity <mux> analyzed. Unit <mux> generated.
+
+Analyzing Entity <regis> in library <work> (Architecture <regis_arc>).
+Entity <regis> analyzed. Unit <regis> generated.
+
+Analyzing Entity <comparator> in library <work> (Architecture <comparator_arc>).
+Entity <comparator> analyzed. Unit <comparator> generated.
+
+Analyzing Entity <subtractor> in library <work> (Architecture <subtractor_arc>).
+Entity <subtractor> analyzed. Unit <subtractor> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <fsm>.
+    Related source file is "C:/Xilinx92i/CGD_CALCULATOR/gcd_dataModeling.vhd".
+    Using one-hot encoding for signal <cState>.
+WARNING:Xst:737 - Found 1-bit latch for signal <enable>.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <ysel>.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <xsel>.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <xld>.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <yld>.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 7-bit latch for signal <nState>.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 7-bit register for signal <cState>.
+Unit <fsm> synthesized.
+
+
+Synthesizing Unit <mux>.
+    Related source file is "C:/Xilinx92i/CGD_CALCULATOR/gcd_dataModeling.vhd".
+Unit <mux> synthesized.
+
+
+Synthesizing Unit <regis>.
+    Related source file is "C:/Xilinx92i/CGD_CALCULATOR/gcd_dataModeling.vhd".
+    Found 4-bit register for signal <output>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <regis> synthesized.
+
+
+Synthesizing Unit <comparator>.
+    Related source file is "C:/Xilinx92i/CGD_CALCULATOR/gcd_dataModeling.vhd".
+    Found 4-bit comparator greater for signal <output$cmp_gt0000> created at line 82.
+    Found 4-bit comparator less for signal <output$cmp_lt0000> created at line 84.
+    Summary:
+	inferred   2 Comparator(s).
+Unit <comparator> synthesized.
+
+
+Synthesizing Unit <subtractor>.
+    Related source file is "C:/Xilinx92i/CGD_CALCULATOR/gcd_dataModeling.vhd".
+WARNING:Xst:2734 - Property "use_dsp48" is not applicable for this technology.
+    Found 4-bit subtractor for signal <xout$addsub0000> created at line 116.
+    Found 4-bit subtractor for signal <yout$addsub0000> created at line 120.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+Unit <subtractor> synthesized.
+
+
+Synthesizing Unit <gcd>.
+    Related source file is "C:/Xilinx92i/CGD_CALCULATOR/gcd_dataModeling.vhd".
+Unit <gcd> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 4-bit subtractor                                      : 2
+# Registers                                            : 4
+ 4-bit register                                        : 3
+ 7-bit register                                        : 1
+# Latches                                              : 6
+ 1-bit latch                                           : 5
+ 7-bit latch                                           : 1
+# Comparators                                          : 2
+ 4-bit comparator greater                              : 1
+ 4-bit comparator less                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Loading device for application Rf_Device from file '3s400.nph' in environment C:\Xilinx92i.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 4-bit subtractor                                      : 2
+# Registers                                            : 19
+ Flip-Flops                                            : 19
+# Latches                                              : 6
+ 1-bit latch                                           : 5
+ 7-bit latch                                           : 1
+# Comparators                                          : 2
+ 4-bit comparator greater                              : 1
+ 4-bit comparator less                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <gcd> ...
+
+Optimizing unit <fsm> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block gcd, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 19
+ Flip-Flops                                            : 19
+
+=========================================================================
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : gcd.ngr
+Top Level Output File Name         : gcd
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 15
+
+Cell Usage :
+# BELS                             : 73
+#      LUT2                        : 5
+#      LUT2_L                      : 1
+#      LUT3                        : 14
+#      LUT3_L                      : 1
+#      LUT4                        : 36
+#      LUT4_D                      : 5
+#      LUT4_L                      : 5
+#      MUXF5                       : 5
+#      VCC                         : 1
+# FlipFlops/Latches                : 31
+#      FDC                         : 6
+#      FDCE                        : 12
+#      FDP                         : 1
+#      LD                          : 12
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 14
+#      IBUF                        : 10
+#      OBUF                        : 4
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s400pq208-4 
+
+ Number of Slices:                      37  out of   3584     1%  
+ Number of Slice Flip Flops:            31  out of   7168     0%  
+ Number of 4 input LUTs:                67  out of   7168     0%  
+ Number of IOs:                         15
+ Number of bonded IOBs:                 15  out of    141    10%  
+ Number of GCLKs:                        1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+---------------------------------------------+------------------------+-------+
+Clock Signal                                 | Clock buffer(FF name)  | Load  |
+---------------------------------------------+------------------------+-------+
+clk                                          | BUFGP                  | 19    |
+TOFSM/nState_not0001(TOFSM/nState_not00011:O)| NONE(*)(TOFSM/nState_6)| 7     |
+TOFSM/enable_or0000(TOFSM/enable_or0000_f5:O)| NONE(*)(TOFSM/ysel)    | 3     |
+TOFSM/xld_or0000(TOFSM/xld_or0000:O)         | NONE(*)(TOFSM/xld)     | 2     |
+---------------------------------------------+------------------------+-------+
+(*) These 3 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+rst                                | IBUF                   | 19    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 8.401ns (Maximum Frequency: 119.033MHz)
+   Minimum input arrival time before clock: 8.185ns
+   Maximum output required time after clock: 7.165ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 8.401ns (frequency: 119.033MHz)
+  Total number of paths / destination ports: 474 / 12
+-------------------------------------------------------------------------
+Delay:               8.401ns (Levels of Logic = 5)
+  Source:            X_REG/output_1 (FF)
+  Destination:       Y_REG/output_3 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: X_REG/output_1 to Y_REG/output_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             7   0.720   1.405  X_REG/output_1 (X_REG/output_1)
+     LUT4:I0->O            3   0.551   1.102  U_COMP/output_cmp_gt0000143 (U_COMP/output_cmp_gt00001_map15)
+     LUT3:I1->O           16   0.551   1.263  U_COMP/output_cmp_gt0000170 (U_COMP/output_cmp_gt0000)
+     LUT4:I3->O            1   0.551   0.827  Y_MUX/output<0>21 (N31)
+     LUT4_L:I3->LO         1   0.551   0.126  Y_MUX/output<3>67 (Y_MUX/output<3>_map17)
+     LUT4:I3->O            1   0.551   0.000  Y_MUX/output<3>107 (ymux<3>)
+     FDCE:D                    0.203          Y_REG/output_3
+    ----------------------------------------
+    Total                      8.401ns (3.678ns logic, 4.723ns route)
+                                       (43.8% logic, 56.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 53 / 12
+-------------------------------------------------------------------------
+Offset:              8.185ns (Levels of Logic = 5)
+  Source:            rst (PAD)
+  Destination:       Y_REG/output_2 (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to Y_REG/output_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            41   0.821   2.100  rst_IBUF (X_SUB/yout_cmp_eq0000)
+     LUT2:I1->O            8   0.551   1.422  Y_MUX/output<0>3_SW0 (N157)
+     LUT4:I0->O            1   0.551   0.996  Y_MUX/output<0>21_SW1 (N390)
+     LUT4_L:I1->LO         1   0.551   0.439  Y_MUX/output<2>64 (Y_MUX/output<2>_map14)
+     LUT4:I0->O            1   0.551   0.000  Y_MUX/output<2>92 (ymux<2>)
+     FDCE:D                    0.203          Y_REG/output_2
+    ----------------------------------------
+    Total                      8.185ns (3.228ns logic, 4.957ns route)
+                                       (39.4% logic, 60.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'TOFSM/nState_not0001'
+  Total number of paths / destination ports: 8 / 5
+-------------------------------------------------------------------------
+Offset:              5.631ns (Levels of Logic = 3)
+  Source:            rst (PAD)
+  Destination:       TOFSM/nState_6 (LATCH)
+  Destination Clock: TOFSM/nState_not0001 falling
+
+  Data Path: rst to TOFSM/nState_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            41   0.821   2.244  rst_IBUF (X_SUB/yout_cmp_eq0000)
+     LUT4:I0->O            7   0.551   1.261  U_COMP/output<0>1 (comparison<0>)
+     LUT3:I1->O            1   0.551   0.000  TOFSM/nState_mux0003<6>1 (TOFSM/nState_mux0003<6>)
+     LD:D                      0.203          TOFSM/nState_6
+    ----------------------------------------
+    Total                      5.631ns (2.126ns logic, 3.505ns route)
+                                       (37.8% logic, 62.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              7.165ns (Levels of Logic = 1)
+  Source:            OUT_REG/output_3 (FF)
+  Destination:       d_o<3> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: OUT_REG/output_3 to d_o<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             1   0.720   0.801  OUT_REG/output_3 (OUT_REG/output_3)
+     OBUF:I->O                 5.644          d_o_3_OBUF (d_o<3>)
+    ----------------------------------------
+    Total                      7.165ns (6.364ns logic, 0.801ns route)
+                                       (88.8% logic, 11.2% route)
+
+=========================================================================
+CPU : 6.43 / 7.04 s | Elapsed : 7.00 / 7.00 s
+ 
+--> 
+
+Total memory usage is 168608 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    7 (   0 filtered)
+Number of infos    :    7 (   0 filtered)
+

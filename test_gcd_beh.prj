@@ -1,0 +1,2 @@
+vhdl work "gcd_dataModeling.vhd"
+vhdl work "test_gcd.vhw"

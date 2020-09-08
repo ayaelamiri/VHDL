@@ -1,0 +1,3 @@
+MODULE test_gcd
+SUBMODULE gcd
+INSTANCE UUT

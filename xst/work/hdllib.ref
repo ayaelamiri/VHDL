@@ -1,0 +1,12 @@
+AR comparator comparator_arc C:/Xilinx92i/CGD_CALCULATOR/gcd_dataModeling.vhd sub00/vhpl03 1599485851
+EN regis NULL C:/Xilinx92i/CGD_CALCULATOR/gcd_dataModeling.vhd sub00/vhpl06 1599485854
+EN subtractor NULL C:/Xilinx92i/CGD_CALCULATOR/gcd_dataModeling.vhd sub00/vhpl04 1599485852
+AR regis regis_arc C:/Xilinx92i/CGD_CALCULATOR/gcd_dataModeling.vhd sub00/vhpl07 1599485855
+EN gcd NULL C:/Xilinx92i/CGD_CALCULATOR/gcd_dataModeling.vhd sub00/vhpl10 1599485858
+AR mux mux_arc C:/Xilinx92i/CGD_CALCULATOR/gcd_dataModeling.vhd sub00/vhpl01 1599485849
+EN fsm NULL C:/Xilinx92i/CGD_CALCULATOR/gcd_dataModeling.vhd sub00/vhpl08 1599485856
+EN mux NULL C:/Xilinx92i/CGD_CALCULATOR/gcd_dataModeling.vhd sub00/vhpl00 1599485848
+AR subtractor subtractor_arc C:/Xilinx92i/CGD_CALCULATOR/gcd_dataModeling.vhd sub00/vhpl05 1599485853
+AR fsm fsm_arc C:/Xilinx92i/CGD_CALCULATOR/gcd_dataModeling.vhd sub00/vhpl09 1599485857
+EN comparator NULL C:/Xilinx92i/CGD_CALCULATOR/gcd_dataModeling.vhd sub00/vhpl02 1599485850
+AR gcd gcd_arc C:/Xilinx92i/CGD_CALCULATOR/gcd_dataModeling.vhd sub00/vhpl11 1599485859

@@ -1,0 +1,41 @@
+V3 23
+FL $XILINX/CGD_CALCULATOR/gcd_dataModeling.vhd 2020/09/07.14:22:43 J.36
+EN work/mux 1599485708 FL $XILINX/CGD_CALCULATOR/gcd_dataModeling.vhd \
+      PB ieee/std_logic_1164 1179176983 PB ieee/std_logic_arith 1179176985 \
+      PB ieee/STD_LOGIC_UNSIGNED 1179176991
+AR work/mux/mux_arc 1599485709 \
+      FL $XILINX/CGD_CALCULATOR/gcd_dataModeling.vhd EN work/mux 1599485708
+EN work/comparator 1599485710 \
+      FL $XILINX/CGD_CALCULATOR/gcd_dataModeling.vhd PB ieee/std_logic_1164 1179176983 \
+      PB ieee/std_logic_arith 1179176985 PB ieee/STD_LOGIC_UNSIGNED 1179176991
+AR work/comparator/comparator_arc 1599485711 \
+      FL $XILINX/CGD_CALCULATOR/gcd_dataModeling.vhd EN work/comparator 1599485710
+EN work/subtractor 1599485712 \
+      FL $XILINX/CGD_CALCULATOR/gcd_dataModeling.vhd PB ieee/std_logic_1164 1179176983 \
+      PB ieee/std_logic_arith 1179176985 PB ieee/STD_LOGIC_UNSIGNED 1179176991
+AR work/subtractor/subtractor_arc 1599485713 \
+      FL $XILINX/CGD_CALCULATOR/gcd_dataModeling.vhd EN work/subtractor 1599485712
+EN work/regis 1599485714 \
+      FL $XILINX/CGD_CALCULATOR/gcd_dataModeling.vhd PB ieee/std_logic_1164 1179176983 \
+      PB ieee/std_logic_arith 1179176985 PB ieee/STD_LOGIC_UNSIGNED 1179176991
+AR work/regis/regis_arc 1599485715 \
+      FL $XILINX/CGD_CALCULATOR/gcd_dataModeling.vhd EN work/regis 1599485714
+EN work/fsm 1599485716 \
+      FL $XILINX/CGD_CALCULATOR/gcd_dataModeling.vhd PB ieee/std_logic_1164 1179176983 \
+      PB ieee/std_logic_arith 1179176985 PB ieee/STD_LOGIC_UNSIGNED 1179176991
+AR work/fsm/fsm_arc 1599485717 \
+      FL $XILINX/CGD_CALCULATOR/gcd_dataModeling.vhd EN work/fsm 1599485716
+EN work/gcd 1599485718 \
+      FL $XILINX/CGD_CALCULATOR/gcd_dataModeling.vhd PB ieee/std_logic_1164 1179176983 \
+      PB ieee/std_logic_arith 1179176985 PB ieee/STD_LOGIC_UNSIGNED 1179176991 \
+      LB work
+AR work/gcd/gcd_arc 1599485719 \
+      FL $XILINX/CGD_CALCULATOR/gcd_dataModeling.vhd EN work/gcd 1599485718 CP fsm \
+      CP mux CP regis CP comparator CP subtractor
+FL $XILINX/CGD_CALCULATOR/test_gcd.vhw 2020/09/07.14:36:05 J.36
+EN work/test_gcd 1599485788 FL $XILINX/CGD_CALCULATOR/test_gcd.vhw \
+      PB ieee/std_logic_1164 1179176983 PB ieee/std_logic_arith 1179176985 \
+      PB ieee/STD_LOGIC_UNSIGNED 1179176991 LB work PB ieee/STD_LOGIC_TEXTIO 1179176993 \
+      PB std/textio 1179176969
+AR work/test_gcd/testbench_arch 1599485789 \
+      FL $XILINX/CGD_CALCULATOR/test_gcd.vhw EN work/test_gcd 1599485788 CP gcd

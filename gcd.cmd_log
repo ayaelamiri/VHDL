@@ -1,0 +1,1 @@
+xst -ise "C:/Xilinx92i/CGD_CALCULATOR/CGD_CALCULATOR.ise" -intstyle ise -ifn gcd.xst -ofn gcd.syr
